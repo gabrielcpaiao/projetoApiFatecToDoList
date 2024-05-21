@@ -15,6 +15,10 @@ public class ToDoList {
     private long id;
     @Column(nullable = false)
     private String task;
+    
+    private String date;
+
+    private 
 
     public long getId() {
         return id;

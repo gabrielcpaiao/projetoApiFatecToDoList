@@ -1,0 +1,15 @@
+Modelo de banco de dados:
+
+Usuario:
+idUser
+nomeUsuario
+
+ToDoList:
+id
+task
+due date
+idUser
+
+Categoria:
+id
+nameCategory
