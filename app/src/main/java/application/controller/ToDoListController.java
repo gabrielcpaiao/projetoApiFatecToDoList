@@ -14,10 +14,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import application.model.todolist;
+import java.util.List;
+
+import application.model.ToDoList;
+import application.repository.ToDoListRepository;
 // import application.repository.;
 // import application.repository.;
 
+@RestController
+@RequestMapping("/toDo")
 public class ToDoListController {
     
+    @Autowired
+    private ToDoListRepository toDoListRepository;
+
+    @GetMapping
+    public Iterable<ToDoList> getAllToDos() {
+        return toDoListRepository.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public ToDoList getToDoById(@PathVariable Long id) {
+        return toDoListRepository.findById(id).orElse(null);
+    }
+
+
 }
