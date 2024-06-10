@@ -37,6 +37,4 @@ public class ToDoListController {
     public ToDoList getToDoById(@PathVariable Long id) {
         return toDoListRepository.findById(id).orElse(null);
     }
-
-
 }
