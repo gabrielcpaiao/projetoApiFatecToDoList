@@ -1,0 +1,7 @@
+POST https://8080-gabrielcpai-projetoapif-32ylbdsrq2s.ws-us114.gitpod.io/toDo
+Content-Type: application/json
+
+{
+    "task": "Faculdade",
+    "date": "2024-10-06"
+}
