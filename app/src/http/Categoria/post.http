@@ -1,6 +1,6 @@
-POST https://8080-gabrielcpai-projetoapif-32ylbdsrq2s.ws-us114.gitpod.io/categories
+POST https://8080-gabrielcpai-projetoapif-w99rx5zgllw.ws-us114.gitpod.io/categories
 Content-Type: application/json
 
 {
-    "nomeCategoria": "Faculdade"
+    "nomeCategoria": "Lazer"
 }

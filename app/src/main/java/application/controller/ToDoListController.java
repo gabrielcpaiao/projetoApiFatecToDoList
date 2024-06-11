@@ -37,4 +37,24 @@ public class ToDoListController {
     public ToDoList getToDoById(@PathVariable Long id) {
         return toDoListRepository.findById(id).orElse(null);
     }
+
+    @PostMapping
+    public ToDoList createToDo(@RequestBody ToDoList toDoList) {
+        return toDoListRepository.save(toDoList);
+    }
+
+    @PutMapping("/{id}")
+    public ToDoList updateToDo(@PathVariable Long id, @RequestBody ToDoList toDoListDetails) {
+        ToDoList toDoList = toDoListRepository.findById(id).orElseThrow();
+        toDoList.setTask(toDoListDetails.getTask());
+        toDoList.setDate(toDoListDetails.getDate());
+        toDoList.setId(toDoListDetails.getId());
+        return toDoListRepository.save(toDoList);
+
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteToDo(@PathVariable Long id) {
+        toDoListRepository.deleteById(id);
+    }
 }
